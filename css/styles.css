@@ -1,32 +1,36 @@
 .player1 {
+  /*border: 2px solid black;*/
+  /*height: 300px;
+  width: 400px;*/
+  margin-left: auto;
+  margin-right: auto;
+
+}
+/*.player2 {
   border: 2px solid black;
   height: 300px;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
 
-}
-.player2 {
-  border: 2px solid black;
-  height: 300px;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-.dice {
+}*/
+/*.dice {
   border: 2px solid black;
   height: 100px;
   width: 100px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 #firstPlayer{
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 #scoreToWin{
   text-align: center;
+}
+
+#showResult{
+  display: none;
 }

@@ -23,24 +23,28 @@
       </div>
       <form id="game-action">
         <div class="row">
-          <div class="player1 col-md-5">
+          <div class="player1 col-md-5 form-group">
             <label for="firstPlayer">First Player</label>
-            <input type="text" id="firstPlayer" value="">
-          </div><!--player1-->
-          <div class="score-to-win col-md-5">
-            <label for="scoreToWin">Score To Win</label>
-            <input type="text" id="scoreToWin" value="100">
-          </div><!--Score to Win-->
+            <input type="text" id="firstPlayer" class="form-control">
 
-        </div><br><!--row-->
-        <div class="row">
-          <div class="dice">
-            <label for="">Roll the Dice</label>
+            <label for="FirstPlayerName">Enter your Name</label>
+            <input type="text" id="FirstPlayerName" class="form-control">
+            <br>
             <button type="submit" name="button" class="rollPlayer1 btn-success">Roll</button>
-          </div><!--dice-->
-        </div><!--row-->
+          </div><!--player1-->
+
+          <div class="score-to-win col-md-5 form-group">
+            <label for="scoreToWin">Score To Win</label>
+            <input type="number" class="form-control" id="scoreToWin" value="100">
+          </div><!--Score to Win-->
+        </div><br><!--row-->
+
       </form>
-      <div class="">
+
+      <div id="showResult">
+        <p>
+          <span class="player1Result"></span>
+        </p>
 
       </div>
 
