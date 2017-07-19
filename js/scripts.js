@@ -1,37 +1,65 @@
 //This constructor represents initial dice values.
-function Dice() {
-  this.diceOne = 1;
-  this.diceValue = 0;
-}
+function LetsPlay () {
+  this.gameDie = new Dice();
+  this.player1 = new Player();
+  // console.log(gameDie);
 
-//This constructor represents player name
-function Player(name){
-  this.name = name;
+  function Dice () {
+    sides = 1;
+  }
+  Dice.prototype.rollDice = function () {
+    return Math.floor(Math.random() * 6) + 1;
+  }
+
+function Player (userName) {
+  this.userName = userName;
   this.turnScore = 0;
   this.totalScore = 0;
   this.isTurn =false;
-  this.Dice = new Dice();
 }
 
-Dice.prototype.rollDice = function(){
-  this.diceOne = Math.floor(Math.random() * 6) + 1;
-  alert(this.diceOne);
+Player.prototype.addItUp = function(input) {
+  this.turnScore += input;
 }
 
+  // Dice.prototype.rollDice = function(){
+  //   return Math.floor(Math.random() * 6) + 1;
+    // this.diceOne = Math.floor(Math.random() * 6) + 1;
+    //
+    // alert(this.diceOne);
+  // }
+
+  // Dice.prototype.gameResult = function(){
+  //   if(this.diceOne === 1){
+  //     return this.turnScore = 0;
+  //     // this.isTurn =false;
+  //   }
+  // }
+}
 
 
 // User Interface Logic
 $(document).ready(function() {
+  var newGame = new LetsPlay();
+
   $("#game-action").submit(function(event) {
     event.preventDefault();
 
-    var inputFirstPlayer = $("#firstPlayer").val();
-    var inputFirstPlayerName = $("FirstPlayerName").val();
-    alert(inputFirstPlayerName);
-    var newPlayer = new Player(inputFirstPlayerName);
+    var thisRoll = newGame.gameDie.rollDice();
 
+    newGame.player1.addItUp(thisRoll);
+    // console.log(thisRoll);
+    // if (thisRoll === 1) {
+    //   alert('hello');
+    // }
 
-    $(".player1Result").text("Hi");
+    // var inputFirstPlayer = $("#firstPlayer").val();
+    var inputFirstPlayerName = $("#FirstPlayerName").val();
+
+    // var newDice = new Dice();
+    // newDice.gameResult();
+
+    // $(".player1Result").text(newDice.turnScore);
     $("#showResult").show();
   });
 });
