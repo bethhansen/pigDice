@@ -25,7 +25,7 @@ The object of the dice game Pig is to be the first player to reach 100 points. E
   * Input: 2
   * Output: turnTotal = 2
 * If the player holds, the turn total, the sum of the rolls during the turn, is
-  added to the player’s score, and it becomes the opponent’s turn..
+  added to the player’s score, and it becomes the opponent’s turn.
   * Input: 3
   * Output: $turnTotal = 5 (2 + 3)
 

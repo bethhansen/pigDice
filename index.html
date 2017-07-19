@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="rules" class="jumbotron">
+        <h2>Pig Dice Game</h2>
+        <ul>
+          <li>If the player rolls a 1, the player scores nothing and it becomes the opponent’s
+            turn.</li>
+          <li>If the player rolls a number other than 1, the number is added to the player’s
+            turn total and the player’s turn continues.</li>
+          <li>If the player holds, the turn total, the sum of the rolls during the turn, is
+            added to the player’s score, and it becomes the opponent’s turn.</li>
+        </ul>
+
+      </div>
+      <form id="game-action">
+        <div class="row">
+          <div class="player1 col-md-5">
+            <label for="firstPlayer">First Player</label>
+            <input type="text" id="firstPlayer" value="">
+          </div><!--player1-->
+          <div class="score-to-win col-md-5">
+            <label for="scoreToWin">Score To Win</label>
+            <input type="text" id="scoreToWin" value="100">
+          </div><!--Score to Win-->
+
+        </div><br><!--row-->
+        <div class="row">
+          <div class="dice">
+            <label for="">Roll the Dice</label>
+            <button type="submit" name="button" class="rollPlayer1 btn-success">Roll</button>
+          </div><!--dice-->
+        </div><!--row-->
+      </form>
+      <div class="">
+
+      </div>
+
+
+    </div><!--container-->
+  </body>
+</html>
+
+
+
+<!-- <div class="player2 col-md-5">
+
+</div><!- -player1-->
